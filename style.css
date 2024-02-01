@@ -1,0 +1,281 @@
+/* Impotação Fonts (GoogleFonts) */
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&family=Montserrat:wght@800&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500&family=Inter:wght@600&family=Montserrat:wght@800&family=Teko:wght@600&display=swap');
+
+/* Estilos gerais (Todo projeto) */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #1F1517;
+    color: #fff;
+}
+ 
+html {
+    font-family: Inter, sans-serif;
+    font-weight: 600;
+}
+
+a {
+    text-decoration: none; /* Remove a decoração do texto */
+}
+
+ul {
+    /* Remove os marcadores (Bolinhas) */
+    list-style-type: none;
+}
+
+/*_________________________________________________*/
+/* Cabeçalho/Header (Barra de navegação) */
+
+nav {
+    max-width: 1120px; /* Define a largura máxima do elemento em 1120 pixels */ 
+    margin: auto; /* Centraliza o elemento horizontamente na tela */
+    padding: 1.5rem 10rem; /* 1.5rem -> preenchimento vertical (topo e base); o elemento será 1.5 maior que o tamanho da fonte do elemento raiz, como por exemplo, um elemento raiz sendo 16px, isso vezes 1.5, será igual a 24px. 
+    10rem -> preenchimento horizontal (esquerda e direita); o elemento será 10 vzes maior do que o tamanho da fonte do elemento raiz */
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: row; /* Define a direção dos elementos filhos como uma linha */
+    justify-content: space-between; /* Distribui os elementos filhos uniformemente ao longo do eixo principal, com espaçamento entre eles */
+}
+
+.title {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    font-weight: 600;
+    text-transform: uppercase; /* Transforma o texto para letras maiúsculas */
+}
+
+/* estilos para o menu hamburguer */
+.menu-toggle {
+    display: none; /* Não exibe em telas grandes */
+    cursor: pointer;
+}
+
+/* Imagem do hamburguer (Responsividade) */
+.menu-icon {
+    width: 28px;
+    margin-left: 20px;
+    display: none;
+}
+
+.menu {
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: row; /* Estabelece a direção dos elementos filhos para uma disposição em linha */
+    gap: 24px; /*Define o espaçamento entre os elementos filhos com 24px*/
+    color: #FFF2E780;/* Define a cor do texto para um tom específico de amarelo */ 
+    margin-top: 9px; /* adiciona um espaçamento de margem superior de 9 pixels ao elemento */
+    margin-left: 25px;
+    margin-right: 52px;
+}
+
+.menu a:hover {
+    color: #fff; /* Nova cor do texto quando o cursor passa por cima */
+}
+
+.menu a:visited {
+    color: #FFF2E780; /* Define a cor dos links visitados como #FFF2E780 */
+}
+
+.github {
+    color: #FFF2E7;
+    font-weight: 600;
+    margin-top: 8px; /* Adiciona um espaçamento de margem superior de 8 pixels ao elemento */
+}
+
+.github:hover {
+    color: #a45a49; /* Nova cor do texto quando o cursor passa por cima */
+}
+
+/* ________________________________________________*/
+/* Sessão Principal (Main) */
+
+main {
+    display: flex; /* Define o elemento como um container flexível */
+    flex-direction: column; /* Estabelece a direção dos elementos filhos para uma disposição em coluna */ 
+}
+
+.container {
+    background: #181012;
+    transform: translateX(100%); /* eixo x 100% */
+    opacity: 0;
+
+    /* Adiciona transição para suavizar a animação  */
+    transition: transform 1s ease, opacity 1s ease;
+}
+
+/* Animação para entrada da direita para a esquerda  */
+.container.slide-from-right {
+    /* função do JS */
+    transform: translateX(0);
+    opacity: 1;
+}
+
+.info {
+    max-width: 1120px; /* Define a largura máxima do elemento como 1120 pixels */
+    height: 60vh; /* Define a altura do elemento como 60% da altura tela (viewport height); já o vw é a mesma coisa, porém em relação a largura*/
+    display: flex; /* Define o elemento como um container flexível */
+    justify-content: space-between; /* Distribui os elementos filhos uniformemente ao longo do eixo principal, com espaçamento entre eles */
+    gap: 6rem; /* Define o espaçamento entre os elementos filhos como 6 vezes o tamanho da unidade rem */
+    align-items: center; /* Alinha os elementos filhos verticamente no centro */
+    padding: 0rem 2rem; /* Define o preenchimento (padding) de 0 na direção vertical e 2 vezes o tamanho da unidade rem na direção horizontal */
+    margin: auto; /* Centraliza o elemento horizontalmente na tela */
+    overflow: clip; /* Apara o conteúdo que ultrapassa o container (No caso as fotos) */
+}
+
+/* Destaque */
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.news {
+    font-family: 'Epilogue', sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: uppercase;
+}
+
+/* Usado na palavra (Novidades) no main */
+.marrom {
+    color: #a45a49; 
+}
+
+/* Usado na palavra (Em alta) em receitas */
+.amarelo {
+    color: #e7a80e; 
+}
+
+h1 {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 56px;
+    font-weight: 800;
+    color: #FFF; 
+}
+
+/* Linha marrom abaixo do título principal (Encontre a receita...) */
+hr {
+    border-color: #a45a49;
+}
+
+/* Texto abaixo do título principal (Explore dezenas...) */
+.subtitle {
+    color: #c7bab3;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.3rem;
+    font-weight: 400;
+    padding-bottom: 20px;
+}
+
+/* Galeria de fotos (Mosaico) */
+.images {
+    max-width: 45%; /* Define a largura máxima do elemento como 45% do espaço disponível */
+    column-count: 4; /* Divide o conteúdo do elemento em 4 colunas */
+    column-gap: 1rem; /* Define o espaçamento entre as colunas como 1 unidade rem em todas as direções (topo, direita, baixo , esquerda) */ 
+}
+
+.images > figure > img {
+    width: 100px;
+    border-radius: 0.5rem;
+}
+
+/* _______________________________________________ */
+/* Botão */
+
+.button {
+    width: 100%;
+    max-width: 1120px;
+    padding: 1rem;
+    margin: auto;
+    transform: translateY(-50%); /* Move o elemento 50% do seu próprio tamanho para cima ao longo do eixo Y */
+}
+
+button {
+    border: none;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    background: #a45a49;
+    transition: background-color 0.3s ease; /* Adiciona uma transição suave para a mudança de cor */
+}
+
+button:hover {
+    background: #783f37; /* Nova cor de fundo quando o cursor passa por cima */
+}
+
+/* _______________________________________________ */
+/* Responsividade (Telas menoresque 768px) */
+
+@media screen and (max-width: 768px) {
+    
+    /* quando a página for menor do que esse valor, a página admitirá as próximas informações */
+
+    /* Header */
+    nav ul {
+        position: absolute; /* trava o menu lá em cima */
+        top: 70px;
+        left: 0;
+        background: #5d40406c;
+        width: 100%;
+        overflow: hidden;
+        transition: max-height 0.5s;
+        z-index: 9;
+    }
+
+    nav ul li {
+        display: block;
+        margin: auto;
+        margin-top: 10px;
+        margin-bottom: 10px;
+    }
+
+    .menu {
+        margin-left: 0px;
+    }
+
+    .menu-icon {
+        display: block;
+        cursor: pointer;
+        margin-right: -70px;
+    }
+
+    .github {
+        margin-left: 70px;
+        margin-right: 70px;
+    }
+
+    .title {
+        margin-left: -100px;
+    }
+    
+    /* Galeria de fotos (Mosaico) */
+
+    .container {
+        padding-top: 30px;
+        padding-bottom: 30px;
+    }
+
+    .images {
+        column-count: 1; /* Exibe apenas 1 coluna de fotos */
+        column-gap: 0.5rem; /* Define o espaçamento entre a colunas como 1 unidade rem */
+    }
+
+    .receitas {
+        padding-top: 0px;
+    }
+
+    .button {
+        padding-bottom: 0px;
+    }
+
+}
+
+
+
+
+ 
+
