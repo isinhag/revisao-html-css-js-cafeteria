@@ -357,7 +357,7 @@ footer {
         position: absolute; /* trava o menu lá em cima */
         top: 70px;
         left: 0;
-        background: #5d40406c;
+        background: #302427cc;
         width: 100%;
         overflow: hidden;
         transition: max-height 0.5s;
@@ -416,6 +416,10 @@ footer {
         display: flex;
         flex-direction: column;
         margin-bottom: 20px; /* Adiciona um espaçamento inferior entre os cards */
+    }
+
+    .card {
+        margin-bottom: 5px;
     }
 
 }
